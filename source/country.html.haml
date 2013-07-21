@@ -22,7 +22,7 @@ title: Discovery
     - discovery_images(country).shuffle.each do |country, category, image, thumbnail|
       - size = rand(2)+1
       .item{:class => "#{category}"}
-        = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto[pp_gal]" 
+        = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto[]" 
 
 
 :javascript
@@ -41,7 +41,13 @@ title: Discovery
   // filter items when filter link is clicked
   $('#filters a').click(function(){
     var selector = $(this).attr('data-filter');
-    $container.isotope({ filter: selector });
+    $container.isotope({ filter: selector }, function(){
+      if(selector == "*"){
+        $container.find("a").attr("rel", "prettyPhoto[]");
+      } else { 
+        $(selector).find("a[rel^='prettyPhoto']").attr("rel", selector+"[]");
+      }
+    });
     return false;
   });
   
