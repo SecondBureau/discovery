@@ -22,7 +22,7 @@ title: Discovery
     - discovery_images(country).shuffle.each do |country, category, image, thumbnail|
       - size = rand(2)+1
       .item{:class => "#{category}"}
-        = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto" 
+        = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto[pp_gal]" 
 
 
 :javascript
