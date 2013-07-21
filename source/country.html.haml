@@ -20,9 +20,9 @@ title: Discovery
 
   #slideshow
     - discovery_images(country).shuffle.each do |country, category, image, thumbnail|
-      .item.box{:class => category}
-        .thumbnail
-          = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto"
+      - size = rand(2)+1
+      .item{:class => "#{category}"}
+        = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto" 
 
 
 :javascript
@@ -32,6 +32,10 @@ title: Discovery
   $container.isotope({
     // options
     itemSelector : '.item',
+    masonry: {
+         columnWidth: 133
+       }
+
   });
   
   // filter items when filter link is clicked

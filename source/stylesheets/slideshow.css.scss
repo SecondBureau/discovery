@@ -1,22 +1,35 @@
 #slideshow-container {
   width: 80%;
-  height: 500px;
+  height: 800px;
   margin: 0 auto;
 }
 
 #slideshow {
   
   width: 100%;
-  height: 500px;
+  height: 800px;
+  padding: 20px;
   margin: 0 auto;
   background: black;
   
-  .box {
-    border: solid 1px;
-    padding: 20px;
+  .item {
+    margin: 3px;
   }
   
-  .thumbnail img {
-    border: solid white 5px;
+  img {
+    border: solid white 1px;
+  }
+  
+  
+   .img1 {
+    width: 250px;
+    height: 250px;
+    border: solid white 0px;
+  }
+  
+  .img2 {
+    width: 123px;
+    height: 123px;
+    border: solid white 0px;
   }
 }

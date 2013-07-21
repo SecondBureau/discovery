@@ -1,5 +1,6 @@
 namespace :assets do
-  task :precompile do
+  task :precompile => :compile_thumbnails do
+    
     sh "middleman build"
   end
   
@@ -13,7 +14,7 @@ namespace :assets do
     Dir.chdir src_path do
       Dir.glob(pattern).each do |i|
         img = Magick::Image.read(File.join(src_path, i)).first
-        thumb = img.scale(0.25)
+        thumb = img.scale(0.5)
         tar_filename = File.join(tar_path, i)
         FileUtils.mkdir_p(File.dirname(tar_filename))
         thumb.write tar_filename
