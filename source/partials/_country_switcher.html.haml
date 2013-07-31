@@ -1,0 +1,10 @@
+.country-switcher
+  %center
+    %ul
+      - data.discovery.countries.each do |c|
+        %li{class: "#{c}#{c.eql?(country)? ' active' : ''}"}
+          = link_to image_tag("buttons/#{c}.jpg"), "/#{c}.html"
+          %br
+          = link_to t("country.#{c}"), "/#{c}.html"
+          
+          

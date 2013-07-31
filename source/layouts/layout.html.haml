@@ -32,11 +32,13 @@
     %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
     
     -# Stylesheets
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Droid+Sans' 
     = stylesheet_link_tag 'application'
+    
     
     -# Javascripts
     = javascript_include_tag 'application'
   
-  %body
+  %body{:class => defined?(country) ? country : 'default'}
   
     = yield

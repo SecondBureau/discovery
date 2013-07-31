@@ -1,0 +1,28 @@
+
+
+@font-face{ 
+  font-family: "UFONTSCOMHELVETICALTCONDENSEDBOLD";
+  src: url('http://fontsforweb.com/public/fonts/7700/UFONTSCOMHELVETICALTCONDENSEDBOLD.eot');
+  src: local("Helvetica LT Condensed Bold"), 
+       url('http://fontsforweb.com/public/fonts/7700/UFONTSCOMHELVETICALTCONDENSEDBOLD.woff') format("woff"), 
+       url('http://fontsforweb.com/public/fonts/7700/UFONTSCOMHELVETICALTCONDENSEDBOLD.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'AkzidenzGroteskBQCondensedBold';
+    src: url('/fonts/akzidenzgroteskbq-bdcnd.eot');
+    src: url('/fonts/akzidenzgroteskbq-bdcnd.eot') format('embedded-opentype'),
+         url('/fonts/akzidenzgroteskbq-bdcnd.woff') format('woff'),
+         url('/fonts/akzidenzgroteskbq-bdcnd.ttf') format('truetype'),
+         url('/fonts/akzidenzgroteskbq-bdcnd.svg#AkzidenzGroteskBQCondensedBold') format('svg');
+}
+
+@font-face {
+    font-family: 'AkzidenzGroteskBQExtraCondeBoldItalic';
+    src: url('/fonts/akzidenzgroteskbq-xbdcndit.eot');
+    src: url('/fonts/akzidenzgroteskbq-xbdcndit.eot') format('embedded-opentype'),
+         url('/fonts/akzidenzgroteskbq-xbdcndit.woff') format('woff'),
+         url('/fonts/akzidenzgroteskbq-xbdcndit.ttf') format('truetype'),
+         url('/fonts/akzidenzgroteskbq-xbdcndit.svg#AkzidenzGroteskBQExtraCondeBoldItalic') format('svg');
+}
+

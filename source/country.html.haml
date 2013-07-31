@@ -2,53 +2,8 @@
 title: Discovery
 ---
 
-// Categories
-
-#slideshow-container
-
-  = link_to 'Home', '/'
-  %h1.welcome= country
-
-  #filters
-    %ul
-      %li= link_to 'All', "#", :"data-filter" => "*"
-      - categories(country).each do |category|
-        %li= link_to category, "#", :"data-filter" => ".#{category}"
-  
-
-  // Images
-
-  #slideshow
-    - discovery_images(country).shuffle.each do |country, category, image, thumbnail|
-      - size = rand(2)+1
-      .item{:class => "#{category}"}
-        = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto[]" 
-
-
-:javascript
-  
-  var $container = $('#slideshow');
-  
-  $container.isotope({
-    // options
-    itemSelector : '.item',
-    masonry: {
-         columnWidth: 133
-       }
-
-  });
-  
-  // filter items when filter link is clicked
-  $('#filters a').click(function(){
-    var selector = $(this).attr('data-filter');
-    $container.isotope({ filter: selector }, function(){
-      if(selector == "*"){
-        $container.find("a").attr("rel", "prettyPhoto[]");
-      } else { 
-        $(selector).find("a[rel^='prettyPhoto']").attr("rel", selector+"[]");
-      }
-    });
-    return false;
-  });
-  
-  $("a[rel^='prettyPhoto']").prettyPhoto();
+.container-fluid  
+  = partial "partials/home", :locals => {:country => country}
+  = partial "partials/about", :locals => {:country => country}
+  = partial "partials/itinerary", :locals => {:country => country}
+  = partial "partials/slideshow", :locals => {:country => country}

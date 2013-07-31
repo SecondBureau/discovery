@@ -1,0 +1,21 @@
+.row-fluid
+  .home
+    .title
+      %p.site-title= t(:title)
+      =image_tag "hrtitle.png"
+      %h1.welcome= t("country.#{country}")
+      %p= t("introduction.#{country}")
+    
+    .bottom-layr4  
+    .bottom-layr3
+    .bottom-layr2
+    .deco1-layr2.hidden-sm
+    .tunland
+    .bottom
+    .left.hidden-sm
+      =image_tag "background/#{country}/left.png"
+    .right
+      = image_tag "background/#{country}/right.png"
+      
+.row-fluid
+  = partial "partials/country_switcher", :locals => {:country => country}

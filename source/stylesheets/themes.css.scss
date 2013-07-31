@@ -1,0 +1,135 @@
+$australia_color1: #065a34;
+$australia_color2: #ebbc00;
+$australia_color3: #e94e24;
+
+$saudi_arabia_color1: #807575;
+$saudi_arabia_color2: #f7dc8b;
+$saudi_arabia_color3: #d84e4e;
+
+$south_africa_color1: #8b5400;
+$south_africa_color2: #eabb00;
+$south_africa_color3: #bc7100;
+
+$chile_color1: #567a99;
+$chile_color2: #badff5;
+$chile_color3: #7db1de;
+
+$malaysia_color1: #94b300;
+$malaysia_color2: #f7f280;
+$malaysia_color3: #b3d800;
+
+@mixin home_scene($country) {
+  .home {
+    background-image: url('/images/background/#{$country}/main.png');
+    .bottom {
+      background-image: url('/images/background/#{$country}/bottom.png');
+    }
+    .bottom-layr2 {
+      background-image: url('/images/background/#{$country}/bottom-layr2.png');
+    }
+    .deco1-layr2 {
+      background-image: url('/images/background/#{$country}/deco1-layr2.png');
+    }
+    .tunland {
+      background-image: url('/images/background/#{$country}/tunland.png');
+    }
+    .bottom-layr3 {
+      background-image: url('/images/background/#{$country}/bottom-layr3.png');
+    }
+  }
+}
+
+
+.australia {
+  hr {border-color: $australia_color1;}
+  @include home_scene(australia);
+}
+
+.saudi_arabia {
+  hr {border-color: $saudi_arabia_color1;}
+  @include home_scene(saudi_arabia);
+  .deco1-layr2 {
+    background-position: 20% 68%;
+  }
+  .tunland {
+    background-position: 70% 100%;
+  }
+}
+
+.south_africa {
+  hr {border-color: $south_africa_color1;}
+  @include home_scene(south_africa);
+  .deco1-layr2 {
+    background-position: 20% 70%;
+  }
+  .tunland {
+    background-position: 90% 70%;
+  }
+}
+
+.chile {
+  hr {border-color: $chile_color1;}
+  @include home_scene(chile);
+  .bottom-layr3 {
+    background-repeat: repeat-x;
+    background-position: 0% 100%;
+  }
+  .bottom-layr4 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 800px;
+    width:100%;
+    background: url('/images/background/chile/bottom-layr4.png') repeat-x bottom left;
+  }
+  .tunland {
+    background-position: 84% 70%;
+  }
+}
+
+.malaysia {
+  hr {border-color: $malaysia_color1;}
+  @include home_scene(malaysia);
+  .bottom-layr3 {
+    background-repeat: repeat-x;
+    background-position: 0% 100%;
+  }
+  .tunland {
+    background-position: 40% 70%;
+  }
+}
+
+
+.country-switcher {
+  
+  li:hover, li.active {
+    &.australia {
+      img { border-color: $australia_color2; }
+      a {color: $australia_color2;}
+    }
+    &.saudi_arabia { 
+      img { border-color: $saudi_arabia_color2; }
+      a {color: $saudi_arabia_color2;}
+    }
+    &.south_africa { 
+      img { border-color: $south_africa_color2; } 
+      a {color: $south_africa_color2;}
+    }
+    &.chile { 
+      img { border-color: $chile_color2; } 
+      a {color: $chile_color2;}
+    }
+    &.malaysia { 
+      img { border-color: $malaysia_color2; }
+      a {color: $malaysia_color2;}
+    }
+  }
+  
+}
+
+
+
+
+
+
+

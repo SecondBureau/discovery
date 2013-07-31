@@ -1,5 +1,7 @@
 require "pathname"
 
+activate :i18n, :langs => [:en]
+
 ###
 # Compass
 ###
@@ -30,7 +32,7 @@ require "pathname"
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
-%w[australia saudi_arabia south_africa].each do |country|
+data.discovery.countries.each do |country|
   proxy "/#{country}.html", "/country.html", :locals => { :country => country }, :ignore => true
 end
 

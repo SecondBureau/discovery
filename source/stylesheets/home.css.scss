@@ -1,0 +1,63 @@
+
+.home {
+  position: relative;
+  height: 800px;
+  background: url('/images/background/australia/main.png') repeat-x top;
+  
+  .bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 800px;
+    width:100%;
+    background: url('/images/background/australia/bottom.png') repeat-x bottom;
+  }
+  
+  .bottom-layr2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 800px;
+    width:100%;
+    background: url('/images/background/australia/bottom-layr2.png') repeat-x bottom;
+  }
+  
+  .deco1-layr2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 800px;
+    width:100%;
+    background: url('/images/background/australia/deco1-layr2.png') no-repeat 30% 100%;
+  }
+  
+  .tunland {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 800px;
+    width:100%;
+    background: url('/images/background/australia/tunland.png') no-repeat 80% 100%;
+  }
+  
+  .bottom-layr3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 800px;
+    width:100%;
+    background: url('/images/background/australia/bottom-layr3.png') no-repeat bottom center;
+  }
+  
+  .left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+}
