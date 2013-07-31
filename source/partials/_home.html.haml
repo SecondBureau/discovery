@@ -19,3 +19,9 @@
       
 .row-fluid
   = partial "partials/country_switcher", :locals => {:country => country}
+  
+:javascript
+  $('.home').height($(window).height() * 0.8);
+  $(window).resize(function() {
+    $('.home').height($(window).height() * 0.8);
+  });

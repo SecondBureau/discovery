@@ -1,63 +1,84 @@
 
 .home {
   position: relative;
-  height: 800px;
+  height: 400px;
+  min-height: 400px;
+  max-height: 800px;
   background: url('/images/background/australia/main.png') repeat-x top;
+  background-size: 100% 100%;
   
   .bottom {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 100%;
     width:100%;
     background: url('/images/background/australia/bottom.png') repeat-x bottom;
+    background-size: auto 100%;
   }
   
   .bottom-layr2 {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 100%;
     width:100%;
     background: url('/images/background/australia/bottom-layr2.png') repeat-x bottom;
+    background-size: auto 100%;
   }
   
   .deco1-layr2 {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 100%;
     width:100%;
     background: url('/images/background/australia/deco1-layr2.png') no-repeat 30% 100%;
+    background-size: auto 100%;
   }
   
   .tunland {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 100%;
     width:100%;
     background: url('/images/background/australia/tunland.png') no-repeat 80% 100%;
+    background-size: auto 100%;
   }
   
   .bottom-layr3 {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 100%;
     width:100%;
     background: url('/images/background/australia/bottom-layr3.png') no-repeat bottom center;
+    background-size: auto 100%;
   }
   
   .left {
     position: absolute;
     bottom: 0px;
     left: 0px;
+    height: 100%;
+     width: 100%;
+    
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
   
   .right {
     position: absolute;
     bottom: 0px;
     right: 0px;
+    height: 100%;
+    width: auto;
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
 }
