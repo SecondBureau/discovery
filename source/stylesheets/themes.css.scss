@@ -78,12 +78,13 @@ $malaysia_color3: #b3d800;
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 800px;
+    height: 100%;
     width:100%;
     background: url('/images/background/chile/bottom-layr4.png') repeat-x bottom left;
+    background-size: auto 100%;
   }
   .tunland {
-    background-position: 84% 70%;
+    background-position: 30% 100%;
   }
 }
 
