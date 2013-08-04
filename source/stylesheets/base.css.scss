@@ -1,96 +1,22 @@
 @charset "utf-8";
-@import "rounded_corner_mixins";
+
+
+.mesures {
+  //background: rgba(255, 0, 0, 0);
+  position: absolute;
+  top: 700px;
+  width: 100%;
+  left: 0px;
+  height: 175px;
+  z-index: 2000;
+  //border: solid 1px blue;
+}
 
 body {
   background: #171515;
   font-family: 'Droid Sans', sans-serif;
-  font-size: 15px;
-}
-
-.title {
-  
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  width: 30%;
-  color: white;
-  z-index: 20;
-  
-  .site-title {
-    color: white;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-    text-shadow: 3px 1px 0 rgba(0, 0, 0, 0.3);
-    padding: 0;
-    margin: 0; 
-  }
-  
-  h1 {
-    font-family: "AkzidenzGroteskBQCondensedBold";
-    color: white;
-    font-weight: bold;
-    font-size: 60px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-shadow: 3px 1px 0 rgba(0, 0, 0, 0.3);
-    padding: 0;
-    margin: 0; 
-  }
-
-}
-
-.country-switcher {
-  
-  position:relative;
-  padding-bottom: 50px;
-  font-family: "AkzidenzGroteskBQExtraCondeBoldItalic";
-  font-size:150%;
-  margin-top: -8%;
-  z-index: 30;
-  
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #333333;
-  }
-  
-  ul {
-    list-style-type: none;
-    height: 10%;
-  }
-  
-  li {
-    margin: 10px;
-    color: white;
-    display:inline-block;
-    width: 15%;
-    max-width: 175px;
-    max-height: 175px;
-    opacity: 0.4;
-    
-    img {
-      @include round-corners(175px);
-      border: solid 5px #000;
-      margin-bottom: 5px;
-    }
-    
-    &.active, &:hover{
-      opacity: 1;
-      
-      
-      img {
-        border-color: white;
-      }
-    }
-    
-  }
-  
-  
-}
-
-    
+  font-size: 1.6em;
+}   
 
 hr {
   border-color: #fff;
@@ -104,21 +30,27 @@ h2 {
   top: -37px;
   background: #171515;
   margin: 0 auto;
+  margin-bottom: 50px;
   width: 220px;
   text-align:center;
 }
 
 
+section {
+  min-height: 500px;
+  max-height: 1000px;
+  position: relative;
+  background: #171515;
+}
 
 .about, .itinerary, .slideshow {
-  min-height: 500px;
-  height: 680px;
   margin: 0;
   padding: 75px 0;
 }
 
 
-.itinerary {
+
+.map {
   background: url('/images/itinerary/australia.jpg') no-repeat center center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -126,6 +58,8 @@ h2 {
   -o-background-size: cover;
   background-size: cover;
   //box-shadow: inset 1px -9px 20px -6px #000;  
+  width:100%;
+  height: 800px;
 }
 
 
@@ -154,13 +88,3 @@ h2 {
 }
 
 img { max-width: 100%; }
-
-
-
-#home-container {
-    position:relative;
-    width:100%;
-    height:682px;
-    background: #d4d4d4 url("../images/home.jpg") no-repeat center center;
-    text-align: center;
-    font-family: sans-serif; }

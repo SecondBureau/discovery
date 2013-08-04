@@ -1,11 +1,10 @@
 .row-fluid
   %hr
-  %h2 about
-  
+  %h2= t :about
+
 .row-fluid
-  .about
-    .col-lg-3.col-offset-3
-      = image_tag lorem.image('350x400')
-    .col-lg-3
-      = lorem.paragraphs 2
+  .col-lg-3.col-offset-3
+    = image_tag lorem.image('350x400')
+  .col-lg-3
+    = lorem.paragraphs 2
   

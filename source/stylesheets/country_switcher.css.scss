@@ -1,0 +1,50 @@
+@import "rounded_corner_mixins";
+
+.country-switcher {
+  
+  position:absolute;
+  width:100%;
+  top: 65%;
+  font-family: "AkzidenzGroteskBQExtraCondeBoldItalic";
+  font-size:180%;
+  z-index: 30;
+  
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    margin: 10px;
+    color: white;
+    display:inline-block;
+    width: 15%;
+    max-width: 175px;
+    max-height: 175px;
+    opacity: 0.4;
+    white-space:nowrap;
+    
+    img {
+      @include round-corners(175px);
+      border: solid 5px #000;
+      margin-bottom: 5px;
+    }
+    
+    &.active, &:hover{
+      opacity: 1;
+      
+      
+      img {
+        border-color: white;
+      }
+    }
+    
+  }
+  
+  
+}

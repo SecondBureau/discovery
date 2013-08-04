@@ -1,0 +1,52 @@
+
+.subMenu.hidden-sm
+  %center
+    %ul
+      %li{:id => 'lis1'}= link_to t(:about), '#', id: 'about', class: 'subNavBtn'
+      %li{:id => 'lis2'}= link_to t(:itinerary), '#', id: 'itinerary', class: 'subNavBtn'
+      %li{:id => 'lis3'}= link_to t(:slideshow), '#', id: 'slideshow', class: 'subNavBtn'
+      %li.active{:id => 'lisTop'}= link_to 'change country', '#', id: 'home', class: 'subNavBtn'
+      
+    
+:javascript
+  $(document).ready(function() {
+  $('.subMenu').smint({
+    'scrollSpeed' : 1000
+  });
+
+  $('section.home').waypoint(function() {
+    
+    $('#lis1').removeClass('active');
+    $('#lis2').removeClass('active');
+    $('#lis3').removeClass('active');
+    $('#lisTop').addClass('active');
+    
+  }, { offset: function() {
+    // This is the calculation that would give you
+    // "bottom of element hits middle of window"
+    return $.waypoints('viewportHeight') / 2 - $(this).outerHeight();
+  } });
+  
+  $('section.about').waypoint(function() {
+    $('#lis1').addClass('active');
+    $('#lis2').removeClass('active');
+    $('#lis3').removeClass('active');
+    $('#lisTop').removeClass('active');
+    
+  }, { offset: '25%' });
+
+  $('section.itinerary').waypoint(function() {
+    $('#lis1').removeClass('active');
+    $('#lis2').addClass('active');
+    $('#lis3').removeClass('active');
+    $('#lisTop').removeClass('active');
+  }, { offset: '25%' });
+  
+  $('section.slideshow').waypoint(function() {
+    $('#lis1').removeClass('active');
+    $('#lis2').removeClass('active');
+    $('#lis3').addClass('active');
+    $('#lisTop').removeClass('active');
+  }, { offset: '25%' });
+  
+  });

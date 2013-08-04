@@ -2,8 +2,22 @@
 title: Discovery
 ---
 
-.container-fluid  
-  = partial "partials/home", :locals => {:country => country}
-  = partial "partials/about", :locals => {:country => country}
-  = partial "partials/itinerary", :locals => {:country => country}
-  = partial "partials/slideshow", :locals => {:country => country}
+.container-fluid
+  %section.home
+    = partial "partials/home", :locals => {:country => country}
+    = partial "partials/country_switcher", :locals => {:country => country}
+    = partial "partials/navbar", :locals => {:country => country}
+  %section.about
+    = partial "partials/about", :locals => {:country => country}
+    .clearfix
+  %section.itinerary
+    = partial "partials/itinerary", :locals => {:country => country}
+    .clearfix
+  %section.slideshow
+    = partial "partials/slideshow", :locals => {:country => country}
+    
+:javascript
+  $('.home').height($(window).height());
+  $(window).on("debouncedresize", function( event ) {
+    $('.home').height($(window).height());
+  });

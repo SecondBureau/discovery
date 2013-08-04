@@ -1,9 +1,11 @@
 
 
-#slideshow {
+#slideshow-container {
   
   margin: 0 auto;
   width: 100%;
+  height: 800px;
+  border: solid 1px red;
   
   .item {
     margin: 3px;

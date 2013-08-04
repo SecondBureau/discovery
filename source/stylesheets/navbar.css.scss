@@ -1,0 +1,47 @@
+
+.subMenu {
+	position: absolute;
+	bottom: 0px;
+	height: 50px;
+	z-index: 1000;
+	width: 100%;
+	background: #333;
+  text-transform: uppercase;
+
+  ul {
+	  padding:0;
+    list-style-type: none;
+    font-family: "UFONTSCOMHELVETICALTCONDENSEDBOLD";
+  }
+  
+  li {
+    display:inline-block;
+    height: 50px;
+    min-width: 200px;
+  	width: 12%;
+    padding: 0.6em 2% 0 2%;
+    font-size: 1.1em;
+    white-space:nowrap;
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  
+  
+  li.active {
+    background: red;
+  }
+  
+  li:hover {
+    background: blue;
+    cursor: pointer;
+    
+    a {
+      text-shadow: none;
+    }
+  }
+}

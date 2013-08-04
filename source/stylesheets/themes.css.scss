@@ -19,7 +19,7 @@ $malaysia_color2: #f7f280;
 $malaysia_color3: #b3d800;
 
 @mixin home_scene($country) {
-  .home {
+  .decoration {
     background-image: url('/images/background/#{$country}/main.png');
     .bottom {
       background-image: url('/images/background/#{$country}/bottom.png');
@@ -39,14 +39,28 @@ $malaysia_color3: #b3d800;
   }
 }
 
+// AUSTRALIA
 
 .australia {
   hr {border-color: $australia_color1;}
+  .subMenu {
+    background: $australia_color1;
+    li.active { background: $australia_color3; }
+    li:hover { background: $australia_color2; }
+  }
   @include home_scene(australia);
 }
 
+
+// SAUDI ARABIA
+
 .saudi_arabia {
   hr {border-color: $saudi_arabia_color1;}
+  .subMenu {
+    background: $saudi_arabia_color1;
+    li.active { background: $saudi_arabia_color3; }
+    li:hover { background: $saudi_arabia_color2; }
+  }
   @include home_scene(saudi_arabia);
   .deco1-layr2 {
     background-position: 20% 68%;
@@ -56,8 +70,15 @@ $malaysia_color3: #b3d800;
   }
 }
 
+// SOUTH AFRICA
+
 .south_africa {
   hr {border-color: $south_africa_color1;}
+  .subMenu {
+    background: $south_africa_color1;
+    li.active { background: $south_africa_color3; }
+    li:hover { background: $south_africa_color2; }
+  }
   @include home_scene(south_africa);
   .deco1-layr2 {
     background-position: 20% 70%;
@@ -67,8 +88,15 @@ $malaysia_color3: #b3d800;
   }
 }
 
+// CHILE
+
 .chile {
   hr {border-color: $chile_color1;}
+  .subMenu {
+    background: $chile_color1;
+    li.active { background: $chile_color3; }
+    li:hover { background: $chile_color2; }
+  }
   @include home_scene(chile);
   .bottom-layr3 {
     background-repeat: repeat-x;
@@ -88,8 +116,15 @@ $malaysia_color3: #b3d800;
   }
 }
 
+// MALAYSIA
+
 .malaysia {
   hr {border-color: $malaysia_color1;}
+  .subMenu {
+    background: $malaysia_color1;
+    li.active { background: $malaysia_color3; }
+    li:hover { background: $malaysia_color2; }
+  }
   @include home_scene(malaysia);
   .bottom-layr3 {
     background-repeat: repeat-x;
