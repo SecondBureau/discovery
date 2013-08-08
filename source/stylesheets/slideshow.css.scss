@@ -2,29 +2,14 @@
 
 #slideshow-container {
   
+  position: relative;
   margin: 0 auto;
+  //border: solid 1px red;
   width: 100%;
   height: 800px;
-  border: solid 1px red;
+  
   
   .item {
     margin: 3px;
-  }
-  
-  img {
-    border: solid white 1px;
-  }
-  
-  
-   .img1 {
-    width: 250px;
-    height: 250px;
-    border: solid white 0px;
-  }
-  
-  .img2 {
-    width: 123px;
-    height: 123px;
-    border: solid white 0px;
   }
 }

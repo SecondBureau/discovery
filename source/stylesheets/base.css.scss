@@ -1,17 +1,5 @@
 @charset "utf-8";
 
-
-.mesures {
-  //background: rgba(255, 0, 0, 0);
-  position: absolute;
-  top: 700px;
-  width: 100%;
-  left: 0px;
-  height: 175px;
-  z-index: 2000;
-  //border: solid 1px blue;
-}
-
 body {
   background: #171515;
   font-family: 'Droid Sans', sans-serif;
@@ -57,7 +45,6 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  //box-shadow: inset 1px -9px 20px -6px #000;  
   width:100%;
   height: 800px;
 }

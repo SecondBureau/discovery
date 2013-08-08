@@ -8,16 +8,16 @@
   // Categories
   %center
     #filters
-      = link_to 'All', "#", :"data-filter" => "*", :class => 'btn btn-primary'
+      = link_to t('categories.all'), "#", :"data-filter" => "*", :class => 'btn btn-primary'
       - categories(country).each do |category|
-        = link_to category, "#", :"data-filter" => ".#{category}", :class => 'btn btn-primary'
+        = link_to t("categories.#{category}"), "#", :"data-filter" => ".#{category}", :class => 'btn btn-primary'
 
   %br
 
   // Images
 
   #slideshow-container
-    - discovery_images(country).shuffle.each do |country, category, image, thumbnail|
+    - discovery_images(country).each do |country, category, image, thumbnail|
       .item{:class => "#{category}"}
         = link_to image_tag(thumbnail), image_path(image), rel: "prettyPhoto[]" 
 
@@ -26,15 +26,13 @@
 
   $.Isotope.prototype._getCenteredMasonryColumns = function() {
     this.width = this.element.width();
-  
     var parentWidth = this.element.parent().width();
-  
-                  // i.e. options.masonry && options.masonry.columnWidth
+               // i.e. options.masonry && options.masonry.columnWidth
     var colW = this.options.masonry && this.options.masonry.columnWidth ||
-                  // or use the size of the first item
-                  this.$filteredAtoms.outerWidth(true) ||
-                  // if there's no items, use size of container
-                  parentWidth;
+               // or use the size of the first item
+               this.$filteredAtoms.outerWidth(true) ||
+               // if there is no items, use size of container
+               parentWidth;
   
     var cols = Math.floor( parentWidth / colW );
     cols = Math.max( cols, 1 );
@@ -48,7 +46,7 @@
   $.Isotope.prototype._masonryReset = function() {
     // layout-specific props
     this.masonry = {};
-    // FIXME shouldn't have to call this again
+    // FIXME should not have to call this again
     this._getCenteredMasonryColumns();
     var i = this.masonry.cols;
     this.masonry.colYs = [];
@@ -88,7 +86,7 @@
     // options
     itemSelector : '.item',
     masonry: {
-         columnWidth: 133
+         columnWidth: 135
        }
 
   });

@@ -15,3 +15,7 @@ en:
   about: about
   itinerary: itinerary
   slideshow: gallery
+  categories:
+    all: All
+    category1: Celebrations
+    category2: Field Action
