@@ -1,5 +1,5 @@
 namespace :assets do
-  task :precompile => :compile_thumbnails do
+  task :precompile => [:mockup_images, :compile_thumbnails] do
     
     sh "middleman build"
   end
@@ -11,7 +11,7 @@ namespace :assets do
     src_path = File.join(root, 'original')
     tar_path = File.join(root, 'thumbnails')
     pattern = File.join '**', "*.{jpg,png}"
-    FileUtils.rm_r tar_path
+    FileUtils.rm_rf tar_path
     Dir.chdir src_path do
       Dir.glob(pattern).each do |i|
         img = Magick::Image.read(File.join(src_path, i)).first
