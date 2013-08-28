@@ -6,4 +6,4 @@
 //= require jquery.waypoints-2.0.2.min
 //= require jquery.debouncedresize
 //= require bootstrap-3.0.0.min
-
+//= require slideshow
