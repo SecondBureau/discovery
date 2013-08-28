@@ -1,3 +1,4 @@
+//= require respond-1.3.0.min
 //= require jquery-1.10.2.min
 //= require jquery.isotope-1.5.25.min
 //= require jquery.isotope.perfectmasonry

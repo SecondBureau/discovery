@@ -1,28 +1,49 @@
 
+@font-face {
+    font-family: 'droid_sans';
+    src: url('droid_sans-webfont.eot');
+    src: url('droid_sans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('droid_sans-webfont.woff') format('woff'),
+         url('droid_sans-webfont.ttf') format('truetype'),
+         url('droid_sans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-@font-face{ 
-  font-family: "UFONTSCOMHELVETICALTCONDENSEDBOLD";
-  src: url('http://fontsforweb.com/public/fonts/7700/UFONTSCOMHELVETICALTCONDENSEDBOLD.eot');
-  src: local("Helvetica LT Condensed Bold"), 
-       url('http://fontsforweb.com/public/fonts/7700/UFONTSCOMHELVETICALTCONDENSEDBOLD.woff') format("woff"), 
-       url('http://fontsforweb.com/public/fonts/7700/UFONTSCOMHELVETICALTCONDENSEDBOLD.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'HelveticaNeueCondensedBold';
+    src: url('/fonts/helveticaneue-condensedbold.eot');
+    src: url('/fonts/helveticaneue-condensedbold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/helveticaneue-condensedbold.woff') format('woff'),
+         url('/fonts/helveticaneue-condensedbold.ttf') format('truetype'),
+         url('/fonts/helveticaneue-condensedbold.svg#HelveticaNeueCondensedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'muroslant';
+    src: url('/fonts/muroslant-webfont.eot');
+    src: url('/fonts/muroslant-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/muroslant-webfont.woff') format('woff'),
+         url('/fonts/muroslant-webfont.ttf') format('truetype'),
+         url('/fonts/muroslant-webfont.svg#muroslant') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
     font-family: 'AkzidenzGroteskBQCondensedBold';
     src: url('/fonts/akzidenzgroteskbq-bdcnd.eot');
-    src: url('/fonts/akzidenzgroteskbq-bdcnd.eot') format('embedded-opentype'),
+    src: local('☺'),
+         url('/fonts/akzidenzgroteskbq-bdcnd.eot?#iefix') format('embedded-opentype'),
          url('/fonts/akzidenzgroteskbq-bdcnd.woff') format('woff'),
          url('/fonts/akzidenzgroteskbq-bdcnd.ttf') format('truetype'),
          url('/fonts/akzidenzgroteskbq-bdcnd.svg#AkzidenzGroteskBQCondensedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: 'AkzidenzGroteskBQExtraCondeBoldItalic';
-    src: url('/fonts/akzidenzgroteskbq-xbdcndit.eot');
-    src: url('/fonts/akzidenzgroteskbq-xbdcndit.eot') format('embedded-opentype'),
-         url('/fonts/akzidenzgroteskbq-xbdcndit.woff') format('woff'),
-         url('/fonts/akzidenzgroteskbq-xbdcndit.ttf') format('truetype'),
-         url('/fonts/akzidenzgroteskbq-xbdcndit.svg#AkzidenzGroteskBQExtraCondeBoldItalic') format('svg');
-}
+
 

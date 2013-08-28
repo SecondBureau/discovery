@@ -3,10 +3,18 @@
     %hr
     %h2= t :about
 
-.container
-  .row
-    .span5
+.container-fluid.hidden-phone
+  .row-fluid
+    .span6
+      %center
+        %iframe{ frameborder:0, width:480, height:270, src:"http://www.dailymotion.com/embed/video/#{t("about-videoid.#{country}")}?autoPlay=1"}
+    .span6
+      %p= t("about-description.#{country}")
+      
+.container-fluid.visible-phone
+  .row-fluid
+    %p= t("about-description.#{country}")
+    %br
+  .row-fluid
+    %center
       %iframe{ frameborder:0, width:480, height:270, src:"http://www.dailymotion.com/embed/video/#{t("about-videoid.#{country}")}?autoPlay=1"}
-    .span2
-    .span5
-      = t("about-description.#{country}")
