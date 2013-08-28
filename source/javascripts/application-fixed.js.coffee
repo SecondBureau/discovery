@@ -5,5 +5,5 @@
 //= require jquery.smint-1.0
 //= require jquery.waypoints-2.0.2.min
 //= require jquery.debouncedresize
-//= require bootstrap-3.0.0.min
+//= require bootstrap-2.3.2.min
 //= require slideshow

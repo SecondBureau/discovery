@@ -1,0 +1,12 @@
+.container-fluid
+  .row-fluid
+    %hr
+    %h2= t :about
+
+.container
+  .row
+    .span5
+      %iframe{ frameborder:0, width:480, height:270, src:"http://www.dailymotion.com/embed/video/#{t("about-videoid.#{country}")}?autoPlay=1"}
+    .span2
+    .span5
+      = t("about-description.#{country}")

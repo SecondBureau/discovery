@@ -1,3 +1,27 @@
+$australia_color1: #065a34;
+$australia_color2: #ebbc00;
+$australia_color3: #e94e24;
+
+$saudi_arabia_color1: #807575;
+$saudi_arabia_color2: #f7dc8b;
+$saudi_arabia_color3: #d84e4e;
+
+$south_africa_color1: #8b5400;
+$south_africa_color2: #eabb00;
+$south_africa_color3: #bc7100;
+
+$chile_color1: #567a99;
+$chile_color2: #badff5;
+$chile_color3: #7db1de;
+
+$malaysia_color1: #94b300;
+$malaysia_color2: #f7f280;
+$malaysia_color3: #b3d800;
+
+body {
+  font-size: 1em;
+}
+
 .section.home {
   .background {
     position: relative;
@@ -11,11 +35,12 @@
     width: 20%;
     left: 54%;
     text-align: left;
+    color: white;
     
     .site-title {
       color: white;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 0.8em;
       letter-spacing: 0px;
       text-transform: uppercase;
       text-shadow: 3px 1px 0 rgba(0, 0, 0, 0.3);
@@ -27,7 +52,7 @@
       font-family: "AkzidenzGroteskBQCondensedBold";
       color: white;
       font-weight: bold;
-      font-size: 4em;
+      font-size: 2em;
       letter-spacing: 1px;
       text-transform: uppercase;
       text-shadow: 3px 1px 0 rgba(0, 0, 0, 0.3);
@@ -40,21 +65,123 @@
     
     position: absolute;
     bottom: 0px;
-        
-    ul {
-      list-style-type: none;
+    width: 100%;
+    font-size: 1em;
+    font-family: "AkzidenzGroteskBQExtraCondeBoldItalic", Arial;
+    
+    .country-block {
+      display:inline-block; 
+      max-width:9%;
+      margin:0 1% 0 1%;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space:nowrap;
       
-      li {
-        margin: 10px;
-        color: white;
-        display:inline-block;
-        
-        img {
-          width: 80%;
-        }
+      p {
+        margin-top:8px;
       }
+    
+      a {
+        text-decoration: none;
+        color: #333333;
+      }
+      
+      &.australia {
+        a:hover {color: $australia_color2;}
+        color: $australia_color2;
+      }
+      
+      &.saudi_arabia { 
+        a:hover {color: $saudi_arabia_color2;}
+        color: $saudi_arabia_color2;
+      }
+      
+      &.south_africa { 
+        a:hover {color: $south_africa_color2;}
+        color: $south_africa_color2;
+      }
+      
+      &.chile { 
+        a:hover {color: $chile_color2;}
+        color: $chile_color2;
+      }
+      
+      &.malaysia { 
+        a:hover {color: $malaysia_color2;}
+        color: $malaysia_color2;
+      }
+
     }
-    
-    
+  }
+}
+
+
+#slideshow-container {
+  
+  position: relative;
+  margin: 0 auto;
+  //border: solid 1px red;
+  width: 100%;
+  height: 800px;
+  
+  
+  .item {
+    margin: 3px;
+  }
+}
+
+// AUSTRALIA
+
+.australia {
+  hr {border-color: $australia_color1;}
+  .subMenu {
+    background: $australia_color1;
+    li.active { background: $australia_color3; }
+    li:hover { background: $australia_color2; }
+  }
+}
+
+
+// SAUDI ARABIA
+
+.saudi_arabia {
+  hr {border-color: $saudi_arabia_color1;}
+  .subMenu {
+    background: $saudi_arabia_color1;
+    li.active { background: $saudi_arabia_color3; }
+    li:hover { background: $saudi_arabia_color2; }
+  }
+}
+
+// SOUTH AFRICA
+
+.south_africa {
+  hr {border-color: $south_africa_color1;}
+  .subMenu {
+    background: $south_africa_color1;
+    li.active { background: $south_africa_color3; }
+    li:hover { background: $south_africa_color2; }
+  }
+}
+
+// CHILE
+
+.chile {
+  hr {border-color: $chile_color1;}
+  .subMenu {
+    background: $chile_color1;
+    li.active { background: $chile_color3; }
+    li:hover { background: $chile_color2; }
+  }
+}
+
+// MALAYSIA
+
+.malaysia {
+  hr {border-color: $malaysia_color1;}
+  .subMenu {
+    background: $malaysia_color1;
+    li.active { background: $malaysia_color3; }
+    li:hover { background: $malaysia_color2; }
   }
 }

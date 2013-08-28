@@ -9,13 +9,26 @@
       %p= t("introduction.#{country}")
 
     .country-switcher
-      %ul
-        %center
-          - data.discovery.countries.each do |c|
-            %li
-              = link_to image_tag("buttons/active/#{c}.png"), "/#{c}.html"
-              %br
-              = link_to t("country.#{c}"), "/#{c}.html"
+      %center
+        - data.discovery.countries.each do |c|
+          .country-block{class: "#{c}"}
+            - if c.eql?(country)
+              = image_tag "buttons/active/#{c}.png"
+              %p= t("country.#{c}")
+            - else
+              = link_to "/#{c}-ie.html" do
+                = image_tag "buttons/inactive/#{c}.png", :class => 'switcher', :'data-country' => "#{c}"
+                %p= t("country.#{c}")
+            
+:javascript
+  $('.switcher').mouseover(function() {
+    var country = $(this).data("country");
+    $(this).attr('src', '/images/buttons/active/' + country + '.png');
+  });
+  $('.switcher').mouseout(function() {
+    var country = $(this).data("country");
+    $(this).attr('src', '/images/buttons/inactive/' + country + '.png');
+  });
             
             
 
