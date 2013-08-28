@@ -37,6 +37,7 @@ $malaysia_color3: #b3d800;
       background-image: url('/images/background/#{$country}/bottom-layr3.png');
     }
   }
+  .map { background-image: url('/images/itinerary/#{$country}.jpg') };
 }
 
 // AUSTRALIA
@@ -49,6 +50,7 @@ $malaysia_color3: #b3d800;
     li:hover { background: $australia_color2; }
   }
   @include home_scene(australia);
+
 }
 
 
@@ -68,6 +70,7 @@ $malaysia_color3: #b3d800;
   .tunland {
     background-position: 70% 100%;
   }
+
 }
 
 // SOUTH AFRICA
@@ -86,6 +89,7 @@ $malaysia_color3: #b3d800;
   .tunland {
     background-position: 90% 70%;
   }
+
 }
 
 // CHILE

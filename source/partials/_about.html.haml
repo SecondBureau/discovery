@@ -3,8 +3,8 @@
   %h2= t :about
 
 .row-fluid
-  .col-lg-3.col-offset-3
-    = image_tag lorem.image('350x400')
+  .col-lg-4.col-offset-2
+    %iframe{ frameborder:0, width:480, height:270, src:"http://www.dailymotion.com/embed/video/#{t("about-videoid.#{country}")}?autoPlay=1"}
   .col-lg-3
-    = lorem.paragraphs 2
+    = t("about-description.#{country}")
   

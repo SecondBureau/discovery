@@ -33,7 +33,8 @@ activate :i18n, :langs => [:en]
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
 data.discovery.countries.each do |country|
-  proxy "/#{country}.html", "/country.html", :locals => { :country => country }, :ignore => true
+  proxy "/#{country}.html", "/country-fluid.html", :locals => { :country => country }, :ignore => true
+  proxy "/#{country}-ie.html", "/country-fixed.html", :locals => { :country => country }, :ignore => true
 end
 
 ###
