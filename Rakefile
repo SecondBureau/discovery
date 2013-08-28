@@ -1,5 +1,5 @@
 namespace :assets do
-  task :precompile => [:mockup_images, :compile_thumbnails] do
+  task :precompile => :compile_thumbnails do
     
     sh "middleman build"
   end
