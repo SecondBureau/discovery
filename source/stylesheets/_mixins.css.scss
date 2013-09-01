@@ -1,0 +1,30 @@
+
+
+
+@mixin customized_button($color1) {
+  $color2: darken($color1, 10%);
+  .btn-custom {
+    background-color: $color1 !important;
+    *background-color: $color2;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color2}", endColorstr="#{$color1}");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#{$color2}), to(#{$color1}));
+    background-image: -moz-linear-gradient(top, #{$color2}, #{$color1});
+    background-image: -ms-linear-gradient(top, #{$color2}, #{$color1});
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #{$color2}), color-stop(100%, #{$color1}));
+    background-image: -webkit-linear-gradient(top, #{$color2}, #{$color1});
+    background-image: -o-linear-gradient(top, #{$color2}, #{$color1});
+    //background-image: linear-gradient(#{$color2}, #{$color1});
+    border-color: #{$color1} #{$color1} hsl(0, 69%, 17%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+    margin: 0 10px 0 10px;
+    text-transform: uppercase;
+    font-family: "HelveticaNeueCondensedBold";
+  }
+
+}

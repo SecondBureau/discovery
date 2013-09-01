@@ -3,18 +3,33 @@
     %hr
     %h2= t :about
 
-.container-fluid.hidden-phone.hidden-tablet
-  .row-fluid
+.container.hidden-phone.hidden-tablet
+  .row
     .span6
       %center
-        %iframe{ frameborder:0, width:480, height:270, src:"http://www.dailymotion.com/embed/video/#{t("about-videoid.#{country}")}?autoPlay=1"}
+        %iframe{ frameborder:0, width:480, height:270, src:"http://api.dmcloud.net/player/embed/5222f77e06361d58a400001f/#{t("about-videoid.#{country}")}?auth=#{t("about-videoauth.#{country}")}"}
     .span6
       %p= t("about-description.#{country}")
+      %br
+      .row
+        .span3
+          %center
+            = link_to t('links.specs'), "http://www.foton-global.com/vehicles/pickup/tunland--2/tunland/characteristics", :"data-filter" => "*", :class => 'btn btn-custom'
+        .span3
+          %center
+            = link_to t('links.dealers'), "http://www.foton-global.com/distributors/brands/tunland", :"data-filter" => "*", :class => 'btn btn-custom'
       
 .container-fluid.visible-phone.visible-tablet
   .row-fluid
-    %p= t("about-description.#{country}")
-    %br
+    %p{:style => "text-align:justify"}= t("about-description.#{country}")
+      
+
+      
   .row-fluid
+    %br
     %center
-      %iframe{ frameborder:0, width:480, height:270, src:"http://www.dailymotion.com/embed/video/#{t("about-videoid.#{country}")}?autoPlay=1"}
+      %iframe{ frameborder:0, width:480, height:270, src:"http://api.dmcloud.net/player/embed/5222f77e06361d58a400001f/#{t("about-videoid.#{country}")}?auth=#{t("about-videoauth.#{country}")}"}
+      %br
+      %br
+      = link_to t('links.specs'), "http://www.foton-global.com/vehicles/pickup/tunland--2/tunland/characteristics", :"data-filter" => "*", :class => 'btn btn-custom'
+      = link_to t('links.dealers'), "http://www.foton-global.com/distributors/brands/tunland", :"data-filter" => "*", :class => 'btn btn-custom'

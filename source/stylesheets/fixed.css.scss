@@ -1,22 +1,6 @@
-$australia_color1: #065a34;
-$australia_color2: #ebbc00;
-$australia_color3: #e94e24;
+@import "colors";
+@import "mixins";
 
-$saudi_arabia_color1: #807575;
-$saudi_arabia_color2: #f7dc8b;
-$saudi_arabia_color3: #d84e4e;
-
-$south_africa_color1: #8b5400;
-$south_africa_color2: #eabb00;
-$south_africa_color3: #bc7100;
-
-$chile_color1: #567a99;
-$chile_color2: #badff5;
-$chile_color3: #7db1de;
-
-$malaysia_color1: #94b300;
-$malaysia_color2: #f7f280;
-$malaysia_color3: #b3d800;
 
 body {
   font-size: 1em;
@@ -139,6 +123,7 @@ body {
     li.active { background: $australia_color3; }
     li:hover { background: $australia_color2; }
   }
+  @include customized_button ($australia_color1);
 }
 
 
@@ -151,6 +136,7 @@ body {
     li.active { background: $saudi_arabia_color3; }
     li:hover { background: $saudi_arabia_color2; }
   }
+  @include customized_button ($saudi_arabia_color1);
 }
 
 // SOUTH AFRICA
@@ -162,6 +148,7 @@ body {
     li.active { background: $south_africa_color3; }
     li:hover { background: $south_africa_color2; }
   }
+  @include customized_button ($south_africa_color1);
 }
 
 // CHILE
@@ -173,6 +160,7 @@ body {
     li.active { background: $chile_color3; }
     li:hover { background: $chile_color2; }
   }
+  @include customized_button ($chile_color1);
 }
 
 // MALAYSIA
@@ -184,6 +172,7 @@ body {
     li.active { background: $malaysia_color3; }
     li:hover { background: $malaysia_color2; }
   }
+  @include customized_button ($malaysia_color1);
 }
 
 
@@ -287,6 +276,7 @@ body {
 @media (max-width: 480px) {
   body {
     margin:0px;
+    padding: 0px;
   } 
   .section.home {
     .title {
@@ -294,6 +284,25 @@ body {
         display: none;
       }
     }
+  }
+  .section.about p {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+  
+  h2 {
+    font-size:2em;
+    width: 180px;
+  }
+  
+  .section {
+    min-height: 100px;
+    max-height: 1000px;
+  }
+  
+.itinerary, .slideshow {
+    margin: 0;
+    padding: 35px 0;
   }
 }
 

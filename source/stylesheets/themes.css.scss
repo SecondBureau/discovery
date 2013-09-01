@@ -1,22 +1,5 @@
-$australia_color1: #065a34;
-$australia_color2: #ebbc00;
-$australia_color3: #e94e24;
-
-$saudi_arabia_color1: #807575;
-$saudi_arabia_color2: #f7dc8b;
-$saudi_arabia_color3: #d84e4e;
-
-$south_africa_color1: #8b5400;
-$south_africa_color2: #eabb00;
-$south_africa_color3: #bc7100;
-
-$chile_color1: #567a99;
-$chile_color2: #badff5;
-$chile_color3: #7db1de;
-
-$malaysia_color1: #94b300;
-$malaysia_color2: #f7f280;
-$malaysia_color3: #b3d800;
+@import "colors";
+@import "mixins";
 
 @mixin home_scene($country) {
   .decoration {
@@ -40,6 +23,7 @@ $malaysia_color3: #b3d800;
   .map { background-image: url('/images/itinerary/#{$country}.jpg') };
 }
 
+
 // AUSTRALIA
 
 .australia {
@@ -50,7 +34,7 @@ $malaysia_color3: #b3d800;
     li:hover { background: $australia_color2; }
   }
   @include home_scene(australia);
-
+  @include customized_button ($australia_color1, $australia_color2);
 }
 
 
@@ -70,7 +54,7 @@ $malaysia_color3: #b3d800;
   .tunland {
     background-position: 70% 100%;
   }
-
+  @include customized_button ($saudi_arabia_color1, $saudi_arabia_color2);
 }
 
 // SOUTH AFRICA
@@ -89,7 +73,7 @@ $malaysia_color3: #b3d800;
   .tunland {
     background-position: 90% 70%;
   }
-
+  @include customized_button ($south_africa_color1, $south_africa_color2);
 }
 
 // CHILE
@@ -118,6 +102,7 @@ $malaysia_color3: #b3d800;
   .tunland {
     background-position: 30% 100%;
   }
+  @include customized_button ($chile_color1, $chile_color2);
 }
 
 // MALAYSIA
@@ -137,6 +122,7 @@ $malaysia_color3: #b3d800;
   .tunland {
     background-position: 40% 70%;
   }
+   @include customized_button ($malaysia_color1, $malaysia_color2);
 }
 
 

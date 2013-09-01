@@ -8,9 +8,9 @@
     .span12
       %center
         #filters
-          = link_to t('categories.all'), "#", :"data-filter" => "*", :class => 'btn btn-primary'
+          = link_to t('categories.all'), "#", :"data-filter" => "*", :class => 'btn btn-custom'
           - categories(country).each do |category|
-            = link_to t("categories.#{category}"), "#", :"data-filter" => ".#{category}", :class => 'btn btn-primary'
+            = link_to t("categories.#{category}"), "#", :"data-filter" => ".#{category}", :class => 'btn btn-custom'
 
   .row-fluid
     .span12
