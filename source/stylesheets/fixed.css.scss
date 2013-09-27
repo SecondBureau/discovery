@@ -62,6 +62,15 @@ body {
     font-size: 1.2em;
     font-family: "muroslant", Arial;
     
+    .country-block:hover {
+      .active {
+        display:block;
+      }
+      img.inactive {
+
+      }
+    }
+
     .country-block {
       display:inline-block; 
       max-width:12%;
@@ -69,7 +78,7 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       white-space:nowrap;
-      
+
       p {
         margin-top:8px;
       }

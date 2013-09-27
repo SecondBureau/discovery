@@ -14,7 +14,7 @@
     text-transform: uppercase;
     color: #333333;
   }
-  
+
   ul {
     list-style-type: none;
   }
@@ -36,15 +36,12 @@
     }
     
     &.active, &:hover{
-      opacity: 1;
-      
-      
+      opacity: 1;   
       img {
         border-color: white;
       }
     }
-    
   }
-  
-  
 }
+
+
