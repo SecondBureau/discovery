@@ -18,17 +18,10 @@
             - else
               = link_to "/#{c}-ie.html" do
                 = image_tag "buttons/inactive/#{c}.png", :class => 'switcher', :'data-country' => "#{c}"
+                = image_tag "buttons/active/#{c}.png", :style => "display:none"
                 %p= t("country.#{c}")
             
 :javascript
-
-  $.fn.preload = function() {
-    this.each(function(){
-      $('<img/>')[0].src = this;
-    });
-  }
-
-  $(['buttons/active/australia.png','buttons/active/chile.png','buttons/active/malaysia.png','buttons/active/saudi_arabia.png','buttons/active/south_africa.png']).preload();
 
   $('.switcher').mouseover(function() {
     var country = $(this).data("country");
